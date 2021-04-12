@@ -111,4 +111,4 @@ backup:
   theme: next
   message: Backup 
   repository:
-    github: git@github.com:CodeLabworld/myBlog.git,backup
+    github: git@github.com:CodeLabworld/myBlog.git.git,backup
