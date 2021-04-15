@@ -1,3 +1,4 @@
+git checkout -b backup
 hexo clean
 git add .
 git commit -m "Blog更新"

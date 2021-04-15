@@ -1,0 +1,46 @@
+body {
+ 	background:url('https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/4.jpg');// 设定背景图片,images同处于source文件夹下
+ 	background-repeat: no-repeat;// 设定背景图片非重复填充
+    background-attachment:fixed;// 设置背景图片不随页面滚动
+    background-position:50% 50%;// 设置背景图片位置
+	background-size: cover// 设置保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小
+}
+.headband {
+  display: none;
+}
+
+/* header-顶部空白 */
+.header, .main-inner {
+  margin-top: 10px;
+
+  +mobile() {
+    margin-top: 0;
+  }
+}
+
+/* 圆角 */
+.header-inner, ///顶部圆角
+.sidebar-inner { //侧边头像圆角
+  border-radius: $myradius;
+}
+
+.site-brand-container {
+  border-radius: $myradius $myradius 0 0;
+
+  +mobile() {
+    border-radius: 0 0 $myradius $myradius;
+  }
+}
+
+/* sidebar-二级菜单圆角 */
+.sub-menu {
+  border-radius: $myradius !important;
+}
+
+/************************** Post ***************************/
+
+/* post-文章卡片圆角 */
+.post-block,
+.post-block+.post-block {
+  border-radius: $myradius !important;
+}

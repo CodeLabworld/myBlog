@@ -106,9 +106,10 @@ deploy:
   repo: git@congloveqiu.cn:/var/repo/hexo.git
   branch: master
 
-backup:
-  type: git
-  theme: next
-  message: Backup 
-  repository:
-    github: git@github.com:CodeLabworld/myBlog.git.git,backup
+symbols_count_time:
+#文章内是否显示
+  symbols: true
+  time: true
+# 网页底部是否显示
+  total_symbols: true
+  total_time: true
