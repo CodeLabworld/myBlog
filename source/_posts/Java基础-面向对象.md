@@ -569,3 +569,692 @@ public class mytest {
 
 ## static关键字
 
+### 使用范围
+
+- 在Java类中，可用static修饰属性、方法、代码块、内部类 
+-  被修饰后的成员具备以下特点： 
+  - 随着类的加载而加载 
+  - 优先于对象存在 
+  - 修饰的成员，被所有对象所共享 
+  - 访问权限允许时，可不创建对象，直接被类调用
+
+### static修饰属性：静态变量（或类变量）
+
+#### 属性，是否使用static修饰，又分为：静态属性  vs 非静态属性(实例变量)
+
+- 实例变量：我们创建了类的多个对象，每个对象都独立的拥一套类中的非静态属性。当修改其中一个对象中的非静态属性时，不会导致其他对象中同样的属性值的修改。
+
+- 静态变量：我们创建了类的多个对象，多个对象共享同一个静态变量。当通过某一个对象修改静态变量时，会导致其他对象调用此静态变量时，是修改过了的。
+
+#### static修饰属性的其他说明：
+
+- 静态变量随着类的加载而加载。可以通过"类.静态变量"的方式进行调用
+
+- 静态变量的加载要早于对象的创建。
+
+- 由于类只会加载一次，则静态变量在内存中也只会存在一份：存在方法区的静态域中。
+
+
+
+- ​          类变量	实例变量
+
+- 类		yes		no
+
+- 对象	yes		yes
+
+#### 静态属性举例：System.out; Math.PI;
+
+#### static修饰方法：静态方法、类方法
+
+- 随着类的加载而加载，可以通过"类.静态方法"的方式进行调用
+- ​           静态方法	非静态方法
+
+ *          类		    yes		no
+ *          对象		yes		yes
+ *          静态方法中，只能调用静态的方法或属性
+ *          非静态方法中，既可以调用非静态的方法或属性，也可以调用静态的方法或属性
+
+#### static的注意点：
+
+- 在静态的方法内，不能使用this关键字、super关键字
+- 关于静态属性和静态方法的使用，大家都从生命周期的角度去理解。
+
+#### 如何判定属性和方法应该使用static关键字：
+
+- 关于属性
+
+> 属性是可以被多个对象所共享的，不会随着对象的不同而不同的。
+> 类中的常量也常常声明为static
+
+- 关于方法
+
+> 操作静态属性的方法，通常设置为static的
+> 工具类中的方法，习惯上声明为static的。 比如：Math、Arrays、Collections
+
+### 类变量 vs 实例变量内存解析
+
+ 类变量（类属性）由该类的所有实例共享
+
+![image-20210415202758153](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415202758153.png)
+
+### 静态变量的内存解析
+
+![image-20210415202820474](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415202820474.png)
+
+### 单例 (Singleton)设计模式
+
+- 设计模式是在大量的实践中总结和理论化之后优选的代码结构、编程风格、 以及解决问题的思考方式。设计模免去我们自己再思考和摸索。就像是经典 的棋谱，不同的棋局，我们用不同的棋谱。”套路” 
+
+- 所谓类的单例设计模式，就是采取一定的方法保证在整个的软件系统中，对 某个类只能存在一个对象实例，并且该类只提供一个取得其对象实例的方法。 如果我们要让类在一个虚拟机中只能产生一个对象，我们首先必须将类的构 造器的访问权限设置为private，这样，就不能用new操作符在类的外部产生 类的对象了，但在类内部仍可以产生该类的对象。因为在类的外部开始还无 法得到类的对象，只能调用该类的某个静态方法以返回类内部创建的对象， 静态方法只能访问类中的静态成员变量，所以，指向类内部产生的该类对象 的变量也必须定义成静态的。
+
+#### 单例(Singleton)设计模式-饿汉式
+
+```java
+class Singleton {
+    // 1.私有化构造器
+    private Singleton() {
+    }
+    // 2.内部提供一个当前类的实例
+    // 4.此实例也必须静态化
+    private static Singleton single = new Singleton();
+    // 3.提供公共的静态的方法，返回当前类的对象
+    public static Singleton getInstance() {
+        return single;
+    }
+}
+```
+
+#### 单例(Singleton)设计模式-懒汉式
+
+```java
+class Singleton {
+    // 1.私有化构造器
+    private Singleton() {
+    }
+    // 2.内部提供一个当前类的实例
+    // 4.此实例也必须静态化
+    private static Singleton single;
+    // 3.提供公共的静态的方法，返回当前类的对象
+    public static Singleton getInstance() {
+        if(single == null) {
+            single = new Singleton();
+        }
+        return single;
+    }
+}
+```
+
+![image-20210415203410826](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415203410826.png)
+
+#### 单例模式的优点
+
+由于单例模式只生成一个实例，减少了系统性能开销，当一个对象的 产生需要比较多的资源时，如读取配置、产生其他依赖对象时，则可 以通过在应用启动时直接产生一个单例对象，然后永久驻留内存的方 式来解决。
+
+#### 举例 java.lang.Runtime
+
+![image-20210415203616995](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415203616995.png)
+
+#### 单例(Singleton)设计模式-应用场景
+
+- 网站的计数器，一般也是单例模式实现，否则难以同步。 
+-  应用程序的日志应用，一般都使用单例模式实现，这一般是由于共享的日志 文件一直处于打开状态，因为只能有一个实例去操作，否则内容不好追加。 
+-  数据库连接池的设计一般也是采用单例模式，因为数据库连接是一种数据库 资源。 
+-  项目中，读取配置文件的类，一般也只有一个对象。没有必要每次使用配置 文件数据，都生成一个对象去读取。 
+-  Application 也是单例的典型应用 
+-  Windows的Task Manager (任务管理器)就是很典型的单例模式 
+-  Windows的Recycle Bin (回收站)也是典型的单例应用。在整个系统运行过程 中，回收站一直维护着仅有的一个实例。
+
+## 理解main方法的语法
+
+由于Java虚拟机需要调用类的main()方法，所以该方法的访问权限必须是 public，又因为Java虚拟机在执行main()方法时不必创建对象，所以该方法必须 是static的，该方法接收一个String类型的数组参数，该数组中保存执行Java命令 时传递给所运行的类的参数。 
+
+又因为main() 方法是静态的，我们不能直接访问该类中的非静态成员，必须创 建该类的一个实例对象后，才能通过这个对象去访问类中的非静态成员，这种情 况，我们在之前的例子中多次碰到。
+
+### 【面试题】
+
+```java
+//此处，Something类的文件名叫OtherThing.java
+class Something {
+    public static void main(String[] something_to_do) { 
+        System.out.println("Do something ...");
+    }
+}
+//上述程序是否可以正常编译、运行？
+
+```
+
+## 模板方法的设计模式
+
+### 解决的问题
+
+在软件开发中实现一个算法时，整体步骤很固定、通用，这些步骤已经在父类中写好了。但是某些部分易变，易变部分可以抽象出来，供不同子类实现。这就是一种模板模式。
+
+###  举例
+
+```java
+abstract class Template{
+	
+	//计算某段代码执行所需要花费的时间
+	public void spendTime(){
+		
+		long start = System.currentTimeMillis();
+		
+		this.code();//不确定的部分、易变的部分
+		
+		long end = System.currentTimeMillis();
+		
+		System.out.println("花费的时间为：" + (end - start));
+		
+	}
+	
+	public abstract void code();
+	
+}
+
+class SubTemplate extends Template{
+
+	@Override
+	public void code() {
+		
+		for(int i = 2;i <= 1000;i++){
+			boolean isFlag = true;
+			for(int j = 2;j <= Math.sqrt(i);j++){
+				
+				if(i % j == 0){
+					isFlag = false;
+					break;
+				}
+			}
+			if(isFlag){
+				System.out.println(i);
+			}
+		}
+
+	}
+	
+}
+
+```
+
+### 应用场景
+
+![image-20210415205119355](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415205119355.png)
+
+## 代理模式
+
+### 解决的问题
+
+代理模式是Java开发中使用较多的一种设计模式。代理设计就是为其他对象提供一种代理以控制对这个对象的访问。 
+
+### 举例
+
+```java
+interface NetWork{
+	
+	public void browse();
+	
+}
+
+//被代理类
+class Server implements NetWork{
+
+	@Override
+	public void browse() {
+		System.out.println("真实的服务器访问网络");
+	}
+
+}
+//代理类
+class ProxyServer implements NetWork{
+	
+	private NetWork work;
+	
+	public ProxyServer(NetWork work){
+		this.work = work;
+	}
+	
+
+	public void check(){
+		System.out.println("联网之前的检查工作");
+	}
+	
+	@Override
+	public void browse() {
+		check();
+		
+		work.browse();
+		
+	}
+	
+}
+```
+
+### 应用场景
+
+![image-20210415205339160](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415205339160.png)
+
+## 代码块
+
+### 代码块(或初始化块)的作用
+
+ 对Java类或对象进行初始化
+
+### 代码块(或初始化块)的分类
+
+一个类中代码块若有修饰符，则只能被static修饰，称为静态代码块 (static block)，没有使用static修饰的，为非静态代码块。
+
+### static代码块通常用于初始化static的属性
+
+### 静态代码块：用static 修饰的代码块
+
+- 可以有输出语句。 
+-  可以对类的属性、类的声明进行初始化操作。 
+- 不可以对非静态的属性初始化。即：不可以调用非静态的属性和方法。 
+- 若有多个静态的代码块，那么按照从上到下的顺序依次执行。 
+-  静态代码块的执行要先于非静态代码块。 
+-  静态代码块随着类的加载而加载，且只执行一次。
+
+```java
+class Person {
+    public static int total;
+    static {
+        total = 100;
+        System.out.println("in static block!");
+    }
+}
+public class PersonTest {
+    public static void main(String[] args) {
+        System.out.println("total = " + Person.total);
+        System.out.println("total = " + Person.total);
+    }
+}
+```
+
+![image-20210415205836449](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415205836449.png)
+
+### 非静态代码块：没有static修饰的代码块
+
+- 可以有输出语句。 
+-  可以对类的属性、类的声明进行初始化操作。 
+-  除了调用非静态的结构外，还可以调用静态的变量或方法。 
+-  若有多个非静态的代码块，那么按照从上到下的顺序依次执行。 
+-  每次创建对象的时候，都会执行一次。且先于构造器执行。
+
+### 属性的赋值顺序
+
+- ①默认初始化
+
+ * ②显式初始化/⑤在代码块中赋值
+ * ③构造器中初始化
+ * ④有了对象以后，可以通过"对象.属性"或"对象.方法"的方式，进行赋值
+ * 执行的先后顺序：① - ② / ⑤ - ③ - ④
+
+![image-20210415205952014](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415205952014.png)
+
+## 关键字：final
+
+在Java中声明类、变量和方法时，可使用关键字final来修饰,表示“最终的”。
+
+- final标记的类不能被继承。提高安全性，提高程序的可读性。 
+- String类、System类、StringBuffer类 
+- final标记的方法不能被子类重写。 
+- 比如：Object类中的getClass()。 
+- final标记的变量(成员变量或局部变量)即称为常量。名称大写，且只 能被赋值一次。 
+- final标记的成员变量必须在声明时或在每个构造器中或代码块中显式赋 值，然后才能使用
+- final double MY_PI = 3.14;
+
+## 抽象类与抽象方法
+
+### 定义
+
+随着继承层次中一个个新子类的定义，类变得越来越具体，而父类则更一 般，更通用。类的设计应该保证父类和子类能够共享特征。有时将一个父 类设计得非常抽象，以至于它没有具体的实例，这样的类叫做抽象类。
+
+![image-20210415210257773](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415210257773.png)
+
+- 用abstract关键字来修饰一个类，这个类叫做抽象类。 
+-  用abstract来修饰一个方法，该方法叫做抽象方法。 
+- 抽象方法：只有方法的声明，没有方法的实现。以分号结束： 比如：public abstract void talk(); 
+- 含有抽象方法的类必须被声明为抽象类。 
+- 抽象类不能被实例化。抽象类是用来被继承的，抽象类的子类必须重 写父类的抽象方法，并提供方法体。若没有重写全部的抽象方法，仍 为抽象类。 
+- 不能用abstract修饰变量、代码块、构造器； 
+- 不能用abstract修饰私有方法、静态方法、final的方法、final的类。
+
+### abstract修饰类：抽象类
+
+- 此类不能实例化
+
+ *      抽象类中一定有构造器，便于子类实例化时调用（涉及：子类对象实例化的全过程）
+ *      开发中，都会提供抽象类的子类，让子类对象实例化，完成相关的操作 --->抽象的使用前提：继承性
+
+### abstract修饰方法：抽象方法
+
+- 抽象方法只方法的声明，没方法体
+
+- 包含抽象方法的类，一定是一个抽象类。反之，抽象类中可以没有抽象方法的。
+
+- 若子类重写了父类中的所的抽象方法后，此子类方可实例化
+
+- 若子类没重写父类中的所的抽象方法，则此子类也是一个抽象类，需要使用abstract修饰
+
+### 注意点
+
+- abstract不能用来修饰：属性、构造器等结构
+- abstract不能用来修饰私方法、静态方法、final的方法、final的类
+
+```java
+abstract class  A {
+    abstract void m1();
+    public void m2() {
+        System.out.println("A类中定义的m2方法");
+    }
+}
+class B extends A {
+    void m1() {
+        System.out.println("B类中定义的m1方法");
+    }
+}
+public class Test {
+    public static void main(String args[]) {
+        A a = new B();
+        a.m1();
+        a.m2();
+    }
+}
+```
+
+### 抽象类应用
+
+![image-20210415210627732](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415210627732.png)
+
+![image-20210415210647644](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415210647644.png)
+
+### 举例二：
+
+```java
+abstract class GeometricObject{
+    public abstract double findArea();
+}
+class Circle extends GeometricObject{
+    private double radius;
+    public double findArea(){
+        return 3.14 * radius * radius;
+    };
+}
+```
+
+### 举例三：
+
+IO流中设计到的抽象类：InputStream/OutputStream / Reader /Writer。在其内部
+定义了抽象的read()、write()方法。
+
+## interface:接口
+
+### 使用说明：
+
+#### 接口使用interface来定义
+
+#### Java中，接口和类是并列的两个结构
+
+#### 如何定义接口：定义接口中的成员
+
+ * JDK7及以前：只能定义全局常量和抽象方法
+    * 			全局常量：public static final的.但是书写时，可以省略不写
+    * 			抽象方法：public abstract的
+ * 		 JDK8：除了定义全局常量和抽象方法之外，还可以定义静态方法、默认方法（略
+
+#### 接口中不能定义构造器的！意味着接口不可以实例化
+
+#### Java开发中，接口通过让类去实现(implements)的方式来使用.
+
+ * 如果实现类覆盖了接口中的所抽象方法，则此实现类就可以实例化
+ * 如果实现类没覆盖接口中所的抽象方法，则此实现类仍为一个抽象类
+
+#### Java类可以实现多个接口   --->弥补了Java单继承性的局限性
+
+ * 格式：class AA extends BB implements CC,DD,EE
+
+#### 接口与接口之间可以继承，而且可以多继承
+
+#### 接口的具体使用，体现多态性
+
+#### 接口，实际上可以看做是一种规范
+
+### 举例
+
+```java
+class Computer{
+	
+	public void transferData(USB usb){//USB usb = new Flash();
+		usb.start();
+		
+		System.out.println("具体传输数据的细节");
+		
+		usb.stop();
+	}
+	
+	
+}
+
+interface USB{
+	//常量：定义了长、宽、最大最小的传输速度等
+	
+	void start();
+	
+	void stop();
+	
+}
+
+class Flash implements USB{
+
+	@Override
+	public void start() {
+		System.out.println("U盘开启工作");
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("U盘结束工作");
+	}
+	
+}
+
+class Printer implements USB{
+	@Override
+	public void start() {
+		System.out.println("打印机开启工作");
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("打印机结束工作");
+	}
+	
+}
+//体会：
+ // 1.接口使用上也满足多态性
+ // 2.接口，实际上就是定义了一种规范
+ // 3.开发中，体会面向接口编程！
+```
+
+### 体会面向接口编程的思想
+
+![image-20210415211555575](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415211555575.png)
+
+面向接口编程：我们在应用程序中，调用的结构都是JDBC中定义的接口，不会出现具体某一个
+数据库厂商的API。
+
+### Java8中关于接口的新规范
+
+- 知识点1：接口中定义的静态方法，只能通过接口来调用。
+
+- 知识点2：通过实现类的对象，可以调用接口中的默认方法。
+  //如果实现类重写了接口中的默认方法，调用时，仍然调用的是重写以后的方法
+
+- 知识点3：如果子类(或实现类)继承的父类和实现的接口中声明了同名同参数的默认方法，那么子类在没重写此方法的情况下，默认调用的是父类中的同名同参数的方法。-->类优先原则
+- 知识点4：如果实现类实现了多个接口，而这多个接口中定义了同名同参数的默认方法，
+  //那么在实现类没重写此方法的情况下，报错。-->接口冲突。
+  //这就需要我们必须在实现类中重写此方法
+- 知识点5：如何在子类(或实现类)的方法中调用父类、接口中被重写的方法
+
+```java
+public void myMethod(){
+    method3();//调用自己定义的重写的方法
+    super.method3();//调用的是父类中声明的
+    //调用接口中的默认方法
+    CompareA.super.method3();
+    CompareB.super.method3();
+}
+```
+
+### 接口和抽象类之间的对比
+
+![image-20210415211918677](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415211918677.png)
+
+### 面试题：
+
+抽象类和接口的异同？
+相同点：不能实例化；都可以包含抽象方法的。
+不同点：
+1）把抽象类和接口(java7,java8,java9)的定义、内部结构解释说明
+2）类：单继承性    接口：多继承
+   类与接口：多实现
+
+## 内部类
+
+### 定义
+
+在Java中，允许一个类的定义位于另一个类的内部，前者称为内部类，后者 称为外部类
+
+Inner class一般用在定义它的类或语句块之内，在外部引用它时必须给出完 整的名称。 
+
+Inner class的名字不能与包含它的外部类类名相同； 
+
+分类： 成员内部类（static成员内部类和非static成员内部类） 局部内部类（不谈修饰符）、匿名内部类
+
+### 成员内部类作为类的成员的角色：
+
+-  和外部类不同，Inner class还可以声明为private或protected； 
+- 可以调用外部类的结构 
+- Inner class 可以声明为static的，但此时就不能再使用外层类的非static的成员 变量； 
+
+### 成员内部类作为类的角色： 
+
+- 可以在内部定义属性、方法、构造器等结构
+- 可以声明为abstract类 ，因此可以被其它的内部类继承 
+- 可以声明为final的
+- 编译以后生成OuterClass$InnerClass.class字节码文件（也适用于局部内部类） 
+
+### 【注意】 
+
+- 非static的成员内部类中的成员不能声明为static的，只有在外部类或static的成员 内部类中才可声明static成员。 
+-  外部类访问成员内部类的成员，需要“内部类.成员”或“内部类对象.成员”的方式 
+-  成员内部类可以直接使用外部类的所有成员，包括私有的数据 
+- 当想要在外部类的静态成员部分使用内部类时，可以考虑内部类声明为静态的
+
+### 内部类举例
+
+```java
+class Outer {
+    private int s;
+    public class Inner {
+        public void mb() {
+            s = 100;
+            System.out.println("在内部类Inner中s=" + s);
+        }
+    }
+    public void ma() {
+        Inner i = new Inner();
+        i.mb();
+    }
+}
+public class InnerTest {
+    public static void main(String args[]) {
+        Outer o = new Outer();
+        o.ma();
+    }
+}
+```
+
+```java
+public class Outer {
+    private int s = 111;
+    public class Inner {
+        private int s = 222;
+        public void mb(int s) {
+            System.out.println(s); // 局部变量s
+            System.out.println(this.s); // 内部类对象的属性s
+            System.out.println(Outer.this.s); // 外部类对象属性s
+        }
+    }
+    public static void main(String args[]) {
+        Outer a = new Outer();
+        Outer.Inner b = a.new Inner();
+        b.mb(333);
+    }
+}
+```
+
+### 如何声明局部内部类
+
+```java
+class 外部类{
+    方法(){
+        class 局部内部类{
+        }
+    }
+    {
+        class 局部内部类{
+        }
+    }
+}
+```
+
+### 如何使用局部内部类
+
+-  只能在声明它的方法或代码块中使用，而且是先声明后使用。除此之外的任何地方 都不能使用该类
+-  但是它的对象可以通过外部方法的返回值返回使用，返回值类型只能是局部内部类 的父类或父接口类型
+
+### 局部内部类的特点
+
+-  内部类仍然是一个独立的类，在编译之后内部类会被编译成独立的.class文件，但 是前面冠以外部类的类名和$符号，以及数字编号。 
+- 只能在声明它的方法或代码块中使用，而且是先声明后使用。除此之外的任何地方 都不能使用该类。 
+- 局部内部类可以使用外部类的成员，包括私有的。 
+- 局部内部类可以使用外部方法的局部变量，但是必须是final的。由局部内部类和局 部变量的声明周期不同所致
+- 局部内部类和局部变量地位类似，不能使用public,protected,缺省,private 
+- 局部内部类不能使用static修饰，因此也不能包含静态成员
+
+### 匿名内部类
+
+#### 定义
+
+匿名内部类不能定义任何静态成员、方法和类，只能创建匿名内部类的一 个实例。一个匿名内部类一定是在new的后面，用其隐含实现一个接口或 实现一个类。
+
+#### 格式：
+
+ new 父类构造器（实参列表）|实现接口(){ //匿名内部类的类体部分 } 
+
+#### 匿名内部类的特点
+
+-  匿名内部类必须继承父类或实现接口
+-  匿名内部类只能有一个对象 
+- 匿名内部类对象只能使用多态形式引用
+
+```java
+interface A{
+    public abstract void fun1();
+}
+public class Outer{
+    public static void main(String[] args) {
+        new Outer().callInner(new A(){
+            //接口是不能new但此处比较特殊是子类对象实现接口，只不过没有为对象取名
+            	public void fun1() {
+                		System.out.println(“implement for fun1");
+                }
+         });// 两步写成一步了
+      }
+      public void callInner(A a) {
+                a.fun1();
+      }
+} 
+```
+
