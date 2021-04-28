@@ -23,7 +23,7 @@ description: Java面向对象
 编译完源程序以后，生成一个或多个字节码文件。
 我们使用JVM中的类的加载器和解释器对生成的字节码文件进行解释运行。意味着，需要将字节码文件对应的类加载到内存中，涉及到内存解析。
 
-![image-20210412085716482](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210412085716482.png)
+![image-20210412085716482](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210412085716482.png)
 
 虚拟机栈，即为平时提到的栈结构。我们将局部变量存储在栈结构中
 堆，我们将new出来的结构（比如：数组、对象）加载在对空间中。补充：对象的属性（非static的）加载在堆空间中。
@@ -31,7 +31,7 @@ description: Java面向对象
 
 ## 类的结构:属性
 
-![image-20210412191158958](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210412191158958.png)
+![image-20210412191158958](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210412191158958.png)
 
 ### 属性vs局部变量
 
@@ -83,13 +83,13 @@ description: Java面向对象
       * 		属性：加载到堆空间中   （非static）
       * 		局部变量：加载到栈空间
 
-  ![image-20210412191114929](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210412191114929.png)
+  ![image-20210412191114929](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210412191114929.png)
 
 ## 类的结构：方法
 
 ### 重写和重载的区别
 
-![image-20210412091208828](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210412091208828.png)
+![image-20210412091208828](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210412091208828.png)
 
 ## 面向对象的特性（封装、继承、多态）
 
@@ -102,7 +102,7 @@ description: Java面向对象
   - 如果不希望类在包外被调用，可以将类设置为缺省的。
 - 权限从小到大顺序为：private <  缺省 < protected < public
 
-![image-20210412091757155](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210412091757155.png)
+![image-20210412091757155](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210412091757155.png)
 
 ### 构造器
 
@@ -125,7 +125,7 @@ description: Java面向对象
 
 
 
-![image-20210412092356775](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210412092356775.png)
+![image-20210412092356775](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210412092356775.png)
 
 
 
@@ -339,7 +339,7 @@ public class Test {
 }
 ```
 
-![image-20210412195922174](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210412195922174.png)
+![image-20210412195922174](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210412195922174.png)
 
 #### 面试题
 
@@ -421,7 +421,7 @@ public class InterviewTest {
 
 #### Object类中的主要结构
 
-![image-20210412201138928](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210412201138928.png)
+![image-20210412201138928](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210412201138928.png)
 
 #### ==操作符与equals方法
 
@@ -491,7 +491,7 @@ public class mytest {
 
 #### 包装类的使用
 
-![image-20210412204040805](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210412204040805.png)
+![image-20210412204040805](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210412204040805.png)
 
 - 基本数据类型包装成包装类的实例 ---装箱
   - 通过包装类的构造器实现： int i = 500; Integer t = new Integer(i);
@@ -508,7 +508,7 @@ public class mytest {
 
 ##### 总结
 
-![image-20210412204427718](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210412204427718.png)
+![image-20210412204427718](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210412204427718.png)
 
 #### 包装类用法举例
 
@@ -635,11 +635,11 @@ public class mytest {
 
  类变量（类属性）由该类的所有实例共享
 
-![image-20210415202758153](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415202758153.png)
+![image-20210415202758153](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210415202758153.png)
 
 ### 静态变量的内存解析
 
-![image-20210415202820474](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415202820474.png)
+![image-20210415202820474](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210415202820474.png)
 
 ### 单例 (Singleton)设计模式
 
@@ -684,7 +684,7 @@ class Singleton {
 }
 ```
 
-![image-20210415203410826](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415203410826.png)
+![image-20210415203410826](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210415203410826.png)
 
 #### 单例模式的优点
 
@@ -692,7 +692,7 @@ class Singleton {
 
 #### 举例 java.lang.Runtime
 
-![image-20210415203616995](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415203616995.png)
+![image-20210415203616995](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210415203616995.png)
 
 #### 单例(Singleton)设计模式-应用场景
 
@@ -778,7 +778,7 @@ class SubTemplate extends Template{
 
 ### 应用场景
 
-![image-20210415205119355](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415205119355.png)
+![image-20210415205119355](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210415205119355.png)
 
 ## 代理模式
 
@@ -831,7 +831,7 @@ class ProxyServer implements NetWork{
 
 ### 应用场景
 
-![image-20210415205339160](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415205339160.png)
+![image-20210415205339160](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210415205339160.png)
 
 ## 代码块
 
@@ -870,7 +870,7 @@ public class PersonTest {
 }
 ```
 
-![image-20210415205836449](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415205836449.png)
+![image-20210415205836449](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210415205836449.png)
 
 ### 非静态代码块：没有static修饰的代码块
 
@@ -889,7 +889,7 @@ public class PersonTest {
  * ④有了对象以后，可以通过"对象.属性"或"对象.方法"的方式，进行赋值
  * 执行的先后顺序：① - ② / ⑤ - ③ - ④
 
-![image-20210415205952014](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415205952014.png)
+![image-20210415205952014](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210415205952014.png)
 
 ## 关键字：final
 
@@ -909,7 +909,7 @@ public class PersonTest {
 
 随着继承层次中一个个新子类的定义，类变得越来越具体，而父类则更一 般，更通用。类的设计应该保证父类和子类能够共享特征。有时将一个父 类设计得非常抽象，以至于它没有具体的实例，这样的类叫做抽象类。
 
-![image-20210415210257773](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415210257773.png)
+![image-20210415210257773](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210415210257773.png)
 
 - 用abstract关键字来修饰一个类，这个类叫做抽象类。 
 -  用abstract来修饰一个方法，该方法叫做抽象方法。 
@@ -964,9 +964,9 @@ public class Test {
 
 ### 抽象类应用
 
-![image-20210415210627732](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415210627732.png)
+![image-20210415210627732](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210415210627732.png)
 
-![image-20210415210647644](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415210647644.png)
+![image-20210415210647644](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210415210647644.png)
 
 ### 举例二：
 
@@ -1078,7 +1078,7 @@ class Printer implements USB{
 
 ### 体会面向接口编程的思想
 
-![image-20210415211555575](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415211555575.png)
+![image-20210415211555575](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210415211555575.png)
 
 面向接口编程：我们在应用程序中，调用的结构都是JDBC中定义的接口，不会出现具体某一个
 数据库厂商的API。
@@ -1108,7 +1108,7 @@ public void myMethod(){
 
 ### 接口和抽象类之间的对比
 
-![image-20210415211918677](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415211918677.png)
+![image-20210415211918677](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210415211918677.png)
 
 ### 面试题：
 

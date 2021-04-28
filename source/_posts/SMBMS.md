@@ -58,13 +58,13 @@ description: smbms超市管理项目
 
 ### 配置tomcat服务器
 
-<img src="https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210416194100498.png" alt="image-20210416194100498" style="zoom:80%;" />![image-20210416194152523](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210416194152523.png)
+<img src="https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210416194100498.png" alt="image-20210416194100498" style="zoom:80%;" />![image-20210416194152523](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210416194152523.png)
 
 <img src="https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210416194100498.png" alt="image-20210416194100498" style="zoom:80%;" />![image-20210416194152523](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210416194152523.png)
 
 ### 创建Java和resource文件夹，并创建Java包结构
 
-![image-20210416194937008](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210416194937008.png)
+![image-20210416194937008](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210416194937008.png)
 
 ### db.properties文件
 
@@ -79,7 +79,7 @@ driverClass=com.mysql.cj.jdbc.Driver
 
 ### 代码编写流程
 
-![image-20210417081321770](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210417081321770.png)
+![image-20210417081321770](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210417081321770.png)
 
 ### pojo层  Java对象
 

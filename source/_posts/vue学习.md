@@ -236,7 +236,7 @@ WeUI是一套同微信原生视觉体验一致的基础样式库， 由微信官
 
 为了降低开发的复杂度， 以后端为出发点， 比如：Struts、Spring MVC等框架的使用， 就是后端的MVC时代；
 以`SpringMVC`流程为例：
-![在这里插入图片描述](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/20200612174447902.png)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/20200612174447902.png)
 
 - 发起请求到前端控制器(`Dispatcher Servlet`)
 - 前端控制器请求`HandlerMapping`查找`Handler`，可以根据`xml`配置、注解进行查找
@@ -264,10 +264,10 @@ WeUI是一套同微信原生视觉体验一致的基础样式库， 由微信官
 ### 3.2、基于AJAX带来的SPA时代
 
 时间回到2005年A OAX(Asynchronous JavaScript And XML， 异步JavaScript和XML，老技术新用法)被正式提出并开始使用CDN作为静态资源存储， 于是出现了JavaScript王者归来(在这之前JS都是用来在网页上贴狗皮膏药广告的) 的SPA(Single Page Application) 单页面应用时代。
-![在这里插入图片描述](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/2020061218034279.png)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/2020061218034279.png)
 **优点**
 这种模式下， **前后端的分工非常清晰， 前后端的关键协作点是AJAX接口。**看起来是如此美妙， 但回过头来看看的话， 这与JSP时代区别不大。复杂度从服务端的JSP里移到了浏览器的JavaScript，浏览器端变得很复杂。类似Spring MVC， **这个时代开始出现浏览器端的分层架构**：
-![在这里插入图片描述](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/20200612180725928.png)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/20200612180725928.png)
 缺点
 
 - **前后端接口的约定**：如果后端的接口一塌糊涂，如果后端的业务模型不够稳定，那么前端开发会很痛苦；不少团队也有类似尝试，通过接口规则、接口平台等方式来做。**有了和后端一起沉淀的接口规则，还可以用来模拟数据，使得前后端可以在约定接口后实现高效并行开发。**
@@ -283,7 +283,7 @@ WeUI是一套同微信原生视觉体验一致的基础样式库， 由微信官
 - MVP(异步通信为主) ：Model、View、Presenter
 - MVVM(异步通信为主)：Model、View、View Model为了降低前端开发复杂度，涌现了大量的前端框架，比如：`Angular JS`、`React`、`Vue.js`、`Ember JS`等， 这些框架总的原则是先按类型分层， 比如Templates、Controllers、Models， 然后再在层内做切分，如下图：
 
-![在这里插入图片描述](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/20200612223107534.png)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/20200612223107534.png)
 
 **优点**
 
@@ -300,7 +300,7 @@ WeUI是一套同微信原生视觉体验一致的基础样式库， 由微信官
 ### 3.4、Node JS带来的全栈时代
 
 前端为主的MV*模式解决了很多很多问题， 但如上所述， 依旧存在不少不足之处。随着Node JS的兴起， JavaScript开始有能力运行在服务端。这意味着可以有一种新的研发模式：
-![在这里插入图片描述](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/20200612223913421.png)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/20200612223913421.png)
 在这种研发模式下，前后端的职责很清晰。对前端来说，两个UI层各司其职：
 
 - Front-end Ul layer处理浏览器层的展现逻辑。通过CSS渲染样式， 通过JavaScript添加交互功能， HTML的生成也可以放在这层， 具体看应用场景。
@@ -334,7 +334,7 @@ MVVM源自于经典的MVC（Model-View-Controller）模式。MVVM的核心是Vie
 - 该层向上与视图层进行双向数据绑定
 - 向下与Model层通过接口请求进行数据交互
 
-![在这里插入图片描述](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/20200615175823742.png)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/20200615175823742.png)
 
 MVVM已经相当成熟了，主要运用但不仅仅在网络应用程序开发中。当下流行的MVVM框架有`Vue.js`，`Anfular JS`
 
@@ -349,7 +349,7 @@ MVVM模式和MVC模式一样，主要目的是分离视图（View）和模型（
 - **独立开发**：开发人员可以专注于业务逻辑和数据的开发（ViewMode），设计人员可以专注于页面设计。
 - **可测试**：界面素来是比较难以测试的，而现在测试可以针对ViewModel来写。
 
-![在这里插入图片描述](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/2020061517580183.png)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/2020061517580183.png)
 
 **（1）View**
 
@@ -968,8 +968,8 @@ Vue.js是一个MV VM框架， 即数据双向绑定， 即当数据发生变化�
 ### 6.3、什么是组件
 
 组件是可复用的`Vue`实例， 说白了就是一组可以重复使用的模板， 跟`JSTL`的自定义标签、`Thymeleal`的`th:fragment`等框架有着异曲同工之妙，通常一个应用会以一棵嵌套的组件树的形式来组织：
-![在这里插入图片描述](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/20200616171528707.png)
-![在这里插入图片描述](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/20200616171908189.png)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/20200616171528707.png)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/20200616171908189.png)
 
 例如，你可能会有页头、侧边栏、内容区等组件，每个组件又包含了其它的像导航链接、博文之类的组件。
 
@@ -1173,7 +1173,7 @@ GitHub：https://github.com/axios/axios
 官方文档：https://cn.vuejs.org/v2/guide/instance.html#生命周期图示
   Vue实例有一个完整的生命周期，也就是从开始创建初女台化数据、编译模板、挂载DOM、渲染一更新一渲染、卸载等一系列过程，我们称这是Vue的生命周期。通俗说就是Vue实例从创建到销毁的过程，就是生命周期。
   在Vue的整个生命周期中，它提供了一系列的事件，可以让我们在事件触发时注册JS方法，可以让我们用自己注册的JS方法控制整个大局，在这些事件响应方法中的this直接指向的是Vue的实例。
-![在这里插入图片描述](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/20200616222020393.png)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/20200616222020393.png)
 
 [回到顶部](https://www.cnblogs.com/zhangzhixi/p/14311057.html#_labelTop)
 
@@ -1488,7 +1488,7 @@ var vm = new Vue({
 
 #### 逻辑理解
 
-![在这里插入图片描述](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/20200618181139418.png)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/20200618181139418.png)
 
 
 
@@ -1571,7 +1571,7 @@ npm install --registry=https://registry.npm.taobao.org
 安装的过程可能有点慢~，耐心等待！虽然安装了cnpm，但是尽量少用！
   安装的位置：`C:\Users\administrator\AppData\Roaming\npm`
 
-![在这里插入图片描述](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/20200619110151865.JPG)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/20200619110151865.JPG)
   **安装vue-cli**
 
 ```sql
@@ -1580,7 +1580,7 @@ cnpm instal1 vue-cli-g
 vue list
 ```
 
-![在这里插入图片描述](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/20200619111125386.JPG)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/20200619111125386.JPG)
 
 
 
@@ -1623,7 +1623,7 @@ npm run dev
 执行完成后，目录多了很多依赖
 
 当出现问题时，可以查看提示进行处理如下
-![img](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/20200619113101422.JPG)
+![img](https://gitee.com/qiu-qiu/blogimg/raw/master/img/20200619113101422.JPG)
 
 [回到顶部](https://www.cnblogs.com/zhangzhixi/p/14311057.html#_labelTop)
 
@@ -1791,7 +1791,7 @@ npm install webpack-cli -g
 - `webpack -v`
 - `webpack-cli -v`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619215458179.png)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/20200619215458179.png)
 
 #### 配置
 
@@ -2090,7 +2090,7 @@ npm run dev
 - views：用于存放Vue视图组件
 - router：用于存放vue-router配置
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619234826107.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Bhbl9oMTk5NQ==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://gitee.com/qiu-qiu/blogimg/raw/master/img/20200619234826107.png)
 
 **创建首页视图，在views目录下创建一个名为Main.vue的视图组件：**
 

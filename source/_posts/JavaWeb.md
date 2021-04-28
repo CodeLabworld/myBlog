@@ -50,7 +50,7 @@ web应用程序编写完后，若想提供给外界访问：需要一个服务�
 
 - 静态web请求响应过程
 
-  ![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1596896598463-669e4279-0bbe-40fe-ba4d-f21db66aede0.png)
+  ![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1596896598463-669e4279-0bbe-40fe-ba4d-f21db66aede0.png)
 
 - 静态web存在的缺点
 
@@ -68,7 +68,7 @@ web应用程序编写完后，若想提供给外界访问：需要一个服务�
 
 页面会动态显示：“web的页面展示的效果因人而异”；
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597891092019-7ace5268-434a-46a1-b274-60841d2fb7b8.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597891092019-7ace5268-434a-46a1-b274-60841d2fb7b8.png)
 
 缺点：
 
@@ -114,7 +114,7 @@ web应用程序编写完后，若想提供给外界访问：需要一个服务�
 
 - **Tomcat服务器**
 
-**![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597891780413-6713d404-492c-45b5-9c0b-205720944987.png)**
+**![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597891780413-6713d404-492c-45b5-9c0b-205720944987.png)**
 
 Tomcat 服务器是一个免费的开放源代码的Web 应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。对于一个初学者来说它是最佳的选择。Tomcat 实际上运行JSP 页面和Servlet。目前Tomcat最新版本为**9.0.37****。**
 
@@ -132,29 +132,29 @@ Tomcat 服务器是一个免费的开放源代码的Web 应用服务器，属于
 
 - 官网：https://tomcat.apache.org/
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597892365854-907c7565-7a20-461f-aa43-b156477bddb0.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597892365854-907c7565-7a20-461f-aa43-b156477bddb0.png)
 
 下载之后，解压即可：
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597892626662-b9577a4a-1758-4f43-88bf-f355536ef5bf.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597892626662-b9577a4a-1758-4f43-88bf-f355536ef5bf.png)
 
 ## 启动Tomcat
 
 测试：http://localhost:8080
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597896554797-ab01edb3-42a1-4078-b424-a4e14dd30eeb.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597896554797-ab01edb3-42a1-4078-b424-a4e14dd30eeb.png)
 
 ## 配置Tomcat
 
-   ![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597897226644-1f0a95a0-3192-418e-9943-7c673c891ef1.png)
+   ![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597897226644-1f0a95a0-3192-418e-9943-7c673c891ef1.png)
 
-​    ![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597897243102-25508f64-267d-4da3-b986-8ae1b420b165.png)
+​    ![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597897243102-25508f64-267d-4da3-b986-8ae1b420b165.png)
 
 ![image.png](../../../../学习资料/Java/狂神说Java/1597897252056-144941e0-6423-4106-9734-2d143765709b.png)
 
  可以更改端口和域名，更改域名要修改C:\Windows\System32\drivers\etc，一般不做更改。
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597897408412-863677eb-262f-46ab-87f9-e205c0774b22.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597897408412-863677eb-262f-46ab-87f9-e205c0774b22.png)
 
 **面试题：**
 
@@ -169,7 +169,7 @@ Tomcat 服务器是一个免费的开放源代码的Web 应用服务器，属于
 
 - - - - 没有，去DNS服务器找，找到的话就返回，找不到就返回找不到。
 
-​         ![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597897885444-71f09346-5003-42c4-8282-b862e00965dd.png)
+​         ![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597897885444-71f09346-5003-42c4-8282-b862e00965dd.png)
 
 
 
@@ -194,7 +194,7 @@ webapps:Tomcat  服务器的web目录
         - ....
 ```
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597898727958-ef3d0cb6-30c8-4733-9712-368aadaf4724.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597898727958-ef3d0cb6-30c8-4733-9712-368aadaf4724.png)
 
 # HTTP协议
 
@@ -307,16 +307,16 @@ X-Ua-Compatible: IE=Edge,chrome=1
 
  **Maven官网：**http://maven.apache.org/download.cgi
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597903104743-d35e45ab-fa0a-474e-9641-b8e469a3590b.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597903104743-d35e45ab-fa0a-474e-9641-b8e469a3590b.png)
 
 ## 配置环境变量 
 
 - M2_HOME     maven目录下的bin目录
 - MAVEN_HOME  maven的目录
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597903824975-a0124bab-109b-4b57-b93b-1b0f08796e38.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597903824975-a0124bab-109b-4b57-b93b-1b0f08796e38.png)
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597903833833-bf9189d7-28e6-4318-842f-29ed6963b48f.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597903833833-bf9189d7-28e6-4318-842f-29ed6963b48f.png)
 
 
 
@@ -328,7 +328,7 @@ X-Ua-Compatible: IE=Edge,chrome=1
   - 国内建议使用阿里云镜像
   - conf下的settings.xml中的mirror下添加
 
-   ![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597904101978-a9aa1a0f-2a4d-45e6-901f-ef690140a9b2.png)
+   ![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597904101978-a9aa1a0f-2a4d-45e6-901f-ef690140a9b2.png)
 
 ```
 <mirror>
@@ -339,7 +339,7 @@ X-Ua-Compatible: IE=Edge,chrome=1
 </mirror>
 ```
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1597904682206-ac920606-3dbd-47a4-bac6-f807bbbbcbad.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1597904682206-ac920606-3dbd-47a4-bac6-f807bbbbcbad.png)
 
 ## 本地仓库的配置
 
@@ -390,7 +390,7 @@ https://blog.csdn.net/With_Her/article/details/89243777
 
 
 
-![image-20210414195406707](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210414195406707.png)
+![image-20210414195406707](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210414195406707.png)
 
 **HelloServlet.java**
 
@@ -439,7 +439,7 @@ public class Servlet1 extends HttpServlet {
 
 ## Servlet原理
 
-![image-20210414200341493](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210414200341493.png)
+![image-20210414200341493](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210414200341493.png)
 
 ## Mapping问题
 
@@ -511,7 +511,7 @@ web容器在启动的时候，它会为每个web程序都创建一个对应的Se
 
 - - 在一个Servlet中，可以在另一个Servlet中拿到，实现了Servlet之间的通信
 
-​     ![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598019995087-0c7b4fb8-bbe1-4285-9c61-a0c243e330ef.png)
+​     ![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598019995087-0c7b4fb8-bbe1-4285-9c61-a0c243e330ef.png)
 
 ```xml
 public class HelloServlet  extends HttpServlet {
@@ -572,7 +572,7 @@ public class GetServlet extends HttpServlet {
 
 先 http://localhost:8080/s2/hello， 不然输出为null
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598019443651-f926ef34-ff4b-44ca-8f54-3340d780fa3d.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598019443651-f926ef34-ff4b-44ca-8f54-3340d780fa3d.png)
 
 ### 获取初始化参数
 
@@ -601,11 +601,11 @@ public class GetServlet extends HttpServlet {
 
 **测试结果：**
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598020843447-09f45609-06df-433f-962b-2c01b4e4d301.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598020843447-09f45609-06df-433f-962b-2c01b4e4d301.png)
 
 ### 请求转发(不是重定向）
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598058018610-8189e3ad-4167-4694-b53d-de8887e1bbd3.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598058018610-8189e3ad-4167-4694-b53d-de8887e1bbd3.png)
 
 ```java
 @Override
@@ -628,7 +628,7 @@ public class GetServlet extends HttpServlet {
 
 **测试结果：**
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598021244992-0bf8f402-c734-44db-8fe2-362d4c7a81a2.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598021244992-0bf8f402-c734-44db-8fe2-362d4c7a81a2.png)
 
 ### 读取资源文件(静态资源导入)
 
@@ -639,7 +639,7 @@ public class GetServlet extends HttpServlet {
 
 - 发现：都被打包到了同一路径下：classes，我们俗称路径为classpath
 
-**![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598060043386-2b4a7650-59ad-42a2-9bc3-6cf0c40cf19d.png)**
+**![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598060043386-2b4a7650-59ad-42a2-9bc3-6cf0c40cf19d.png)**
 
 **需要在本项目的****pom.xml****中****配置resources**
 
@@ -713,7 +713,7 @@ password=123456
 
 **测试结果：**
 
-**![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598060812023-6388fb4a-2f0b-42cc-9070-a88c1c0b82f6.png)**
+**![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598060812023-6388fb4a-2f0b-42cc-9070-a88c1c0b82f6.png)**
 
 ## HttpServletResponse
 
@@ -907,7 +907,7 @@ public class Servlet1 extends HttpServlet {
 
 #### 实现重定向
 
-   ![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598104464139-c3655ec2-84f2-4e4a-ac2e-63332a8230b9.png)
+   ![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598104464139-c3655ec2-84f2-4e4a-ac2e-63332a8230b9.png)
 
  B一个web资源收到客户端请求后，他会通知客户端去访问另外一个web资源，这个过程叫重定向。
 
@@ -971,21 +971,21 @@ public class RequestTestServlet extends HttpServlet {
 </html>
 ```
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598109018004-9f4c5614-2577-406e-b654-590118e9e1f4.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598109018004-9f4c5614-2577-406e-b654-590118e9e1f4.png)
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598109052674-9ab55ab9-4fc2-411e-baca-ede515212ef9.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598109052674-9ab55ab9-4fc2-411e-baca-ede515212ef9.png)
 
 ## HttpServletRequest
 
 HttpServletRequest代表客户端的请求，用户通过Http协议访问服务器，Http请求中的所有信息会被封装到HttpServletRequest，通过这个HttpServletRequest方法，获得客户端的所有信息。
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598145771426-8402d74e-22a2-4e2b-b209-2a960acc6300.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598145771426-8402d74e-22a2-4e2b-b209-2a960acc6300.png)
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598145794826-95125fb5-f6d3-4368-920f-b81f61c2dbe2.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598145794826-95125fb5-f6d3-4368-920f-b81f61c2dbe2.png)
 
 ### 获取前端传递的参数和请求转发
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598145966194-14c085af-39c1-4e96-86fe-111934655f75.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598145966194-14c085af-39c1-4e96-86fe-111934655f75.png)
 
 ```java
 public class LoginServlet  extends HttpServlet {
@@ -1101,11 +1101,11 @@ public class CookieDemo extends HttpServlet {
 
 ![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598151296347-8c4c3c75-b480-4c9a-bffe-ed656a8b3f4f.png)
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598151279143-ef1dafd5-86c4-47d7-851f-366deae3b178.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598151279143-ef1dafd5-86c4-47d7-851f-366deae3b178.png)
 
 ### Session（重点）
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598196442356-fc2ae54a-34e9-4a0d-9f67-88da1d869d8c.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598196442356-fc2ae54a-34e9-4a0d-9f67-88da1d869d8c.png)
 
 #### **什么是Session：**
 
@@ -1204,15 +1204,15 @@ public class SessionDemo extends HttpServlet {
 
 Tomcat服务器的work目录
 
-   ![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598196843150-754658d5-c6de-4246-bef0-7482b0ce0e48.png)
+   ![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598196843150-754658d5-c6de-4246-bef0-7482b0ce0e48.png)
 
 IDEA工作空间
 
-   ![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598196911904-767ef6f1-46c4-45e7-aa1c-771fbd4cea6c.png)
+   ![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598196911904-767ef6f1-46c4-45e7-aa1c-771fbd4cea6c.png)
 
 页面转变为了Java程序：
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598197216180-750bfc69-2088-4daa-bf4c-7d2fffcd40cb.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598197216180-750bfc69-2088-4daa-bf4c-7d2fffcd40cb.png)
 
 浏览器向服务器发送请求，不管访问什么资源，其实都是在访问Servlet!
 
@@ -1273,7 +1273,7 @@ out.write("</html>\r\n");
 
 以上的这些对象我们可以在JSP的页面中直接使用。
 
-![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598199502141-28e02361-8725-467e-a5ef-22900761d017.png)
+![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598199502141-28e02361-8725-467e-a5ef-22900761d017.png)
 
 ### JSP 基础语法
 
@@ -1387,7 +1387,7 @@ out.write("</html>\r\n");
 - **page**
 - **Exception**
 
-**![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598249804087-cf0976fa-0b10-42ba-8fa2-d65297416506.png)**
+**![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598249804087-cf0976fa-0b10-42ba-8fa2-d65297416506.png)**
 
 ```jsp
 <%--内置对象--%>
@@ -1477,7 +1477,7 @@ https://www.runoob.com/jsp/jsp-jstl.html
 <%@ taglib prefix="c" uri="`[`http://java.sun.com/jsp/jstl/core`](http://java.sun.com/jsp/jstl/core)`" %>
 ```
 
-   ![image.png](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/1598251283981-2256c802-773d-4a6e-94a9-f7f389c787ab.png)
+   ![image.png](https://gitee.com/qiu-qiu/blogimg/raw/master/img/1598251283981-2256c802-773d-4a6e-94a9-f7f389c787ab.png)
 
 - JSTL标签使用步骤：
 

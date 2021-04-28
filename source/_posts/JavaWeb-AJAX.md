@@ -379,7 +379,7 @@ public String ajax3(String name,String pwd){
 
 测试一下效果，动态请求响应，局部刷新，就是如此！
 
-![image-20210415153829421](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210415153829421.png)
+![image-20210415153829421](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210415153829421.png)
 
 
 

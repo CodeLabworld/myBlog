@@ -132,9 +132,9 @@ boolean replaceAll(List list，Object oldVal，Object newVal)：使用新值替�
 
 ## Collection接口
 
-![image-20210427234210210](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210427234210210.png)
+![image-20210427234210210](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210427234210210.png)
 
-![image-20210427234244985](https://congloveqiu.oss-cn-chengdu.aliyuncs.com/img/image-20210427234244985.png)
+![image-20210427234244985](https://gitee.com/qiu-qiu/blogimg/raw/master/img/image-20210427234244985.png)
 
 ### Collection接口常用方法：
 
